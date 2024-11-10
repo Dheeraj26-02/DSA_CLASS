@@ -64,4 +64,11 @@ public class Implement {
         }
         return false;
     }
+    public static void main(String[] args) {
+        Implement imp=new Implement();
+        imp.put("Dheeraj", 21);
+        imp.put("Kavya",6);
+        imp.put("Jatin",18);
+        imp.put("Akki",15);
+    }
 }

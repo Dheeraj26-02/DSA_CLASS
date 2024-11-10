@@ -10,7 +10,7 @@ public class Dijkstra {
 
     public Dijkstra(int v) {
         map = new HashMap<>();
-
+        //Construction of Graph....................................................................................
         for (int i = 1; i <= v; i++) {
             map.put(i, new HashMap<>());
         }
@@ -20,7 +20,7 @@ public class Dijkstra {
         map.get(v1).put(v2, cost);
         map.get(v2).put(v1, cost);
     }
-
+    	
     public void dijkstra(int src) {
         HashSet<Integer> visisted = new HashSet<>();
         PriorityQueue<DijPair> pq = new PriorityQueue<>(new Comparator<DijPair>() {
@@ -46,9 +46,7 @@ public class Dijkstra {
                     pq.add(new DijPair(nbrs, rp.path + nbrs, rp.cost + map.get(rp.vtx).get(nbrs)));
                 }
             }
-
         }
-
     }
 
     class DijPair {
