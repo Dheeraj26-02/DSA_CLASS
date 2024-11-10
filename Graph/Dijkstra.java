@@ -64,7 +64,7 @@ public class Dijkstra {
 
         @Override
         public String toString() {
-            return this.vtx + "->" + this.path + "@" + this.cost;
+            return this.vtx + " -> " + this.path + " @ " + this.cost;
         }
     }
 
