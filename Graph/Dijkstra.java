@@ -1,4 +1,7 @@
 //Only used in case of +ve edge(cost)
+//Dijsktra Algorithm and Bellman Ford
+//Single source shortest path 
+//Connected and cost should be non-negative (directed or undirected)
 
 import java.util.Comparator;
 import java.util.HashMap;

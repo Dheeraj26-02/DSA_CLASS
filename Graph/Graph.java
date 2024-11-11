@@ -50,7 +50,6 @@ public class Graph {
         if (map.containsKey(v1)) {
             for (int key : map.get(v1).keySet()) {
                 map.get(key).remove(v1);
-
             }
             map.remove(v1);
         }
@@ -160,7 +159,7 @@ public class Graph {
                 System.out.print(rv + " ");
                 // visted
                 visited.add(rv);
-
+                //nrbs
                 for (int nbrs : map.get(rv).keySet()) {
                     if (!visited.contains(nbrs))
                         q.add(nbrs);
@@ -169,8 +168,4 @@ public class Graph {
             System.out.println();
         }
     }
-    //Dijsktra Algorithm
-    //Single source shortest path 
-    //Connected and cost should be non-negative (directed or undirected)
-    //
 }
