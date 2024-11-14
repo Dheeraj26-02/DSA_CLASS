@@ -3,7 +3,6 @@
 //Single source shortest path 
 //Connected and cost should be non-negative (directed or undirected)
 
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.PriorityQueue;
@@ -26,11 +25,7 @@ public class Dijkstra {
     	
     public void dijkstra(int src) {
         HashSet<Integer> visisted = new HashSet<>();
-        PriorityQueue<DijPair> pq = new PriorityQueue<>(new Comparator<DijPair>() {
-            public int compare(DijPair o1, DijPair o2) {
-                return o1.cost - o2.cost;
-            }
-        });
+        PriorityQueue<DijPair> pq = new PriorityQueue<>((o1, o2) -> o1.cost - o2.cost);
         pq.add(new DijPair(src, "" + src, 0));
         while (!pq.isEmpty()) {
             // remove
