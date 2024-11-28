@@ -13,7 +13,12 @@ public class GraphMain {
         gr.addEdge(6, 7, 6);
 
         gr.display();
-        System.out.println(gr.hasPath(1, 6, new HashSet<>()));
+        System.out.println();
+        System.out.println("Has Path:- "+gr.hasPath(1, 6, new HashSet<>()));
+        System.out.println();
+        System.out.println("All Paths:- ");
         gr.PrintAllPath(1, 6, new HashSet<>(), "");
+        System.out.println();
+        System.out.println("BFS:- "+ gr.BFS(1,8));
     }
 }

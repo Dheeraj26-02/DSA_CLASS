@@ -90,6 +90,9 @@ public class Graph {
         }
         visited.remove(src);
     }
+
+
+    //BFS :- Take all neighbours of the vertex at once........................................................................
     
     public boolean BFS(int src, int dest) {
         HashSet<Integer> visited = new HashSet<>();
@@ -102,7 +105,7 @@ public class Graph {
             if (visited.contains(rv)) {
                 continue;
             }
-            // visted
+            // visited
             visited.add(rv);
             if (rv == dest) {
                 return true;
@@ -115,6 +118,8 @@ public class Graph {
         return false;
 
     }
+
+    ////DFS :- Take one neighbours of the vertex at once then find the neighbour of neighbours................................
 
     public boolean DFS(int src, int dest) {
         HashSet<Integer> visited = new HashSet<>();
@@ -140,6 +145,9 @@ public class Graph {
         }
         return false;
     }
+
+    //......................................................................................................................
+    //We use BFT and DFT only when the source are not connected .
 
     public void BFT() {
         HashSet<Integer> visited = new HashSet<>();
