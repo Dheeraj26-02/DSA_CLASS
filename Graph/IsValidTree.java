@@ -17,9 +17,9 @@ public class IsValidTree {
         for (int i = 0; i < n; i++) {
             map.put(i, new ArrayList<>());
         }
-        for (int i = 0; i < edges.length; i++) {
-            int a = edges[i][0];
-            int b = edges[i][1];
+        for (int[] edge : edges) {
+            int a = edge[0];
+            int b = edge[1];
             map.get(a).add(b);
             map.get(b).add(a);
         }
