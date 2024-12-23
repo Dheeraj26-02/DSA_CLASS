@@ -28,7 +28,7 @@ public class Dis_Joint_Set_Union {
             return node;
         }
         Node nn = find(node.parent);
-        node.parent = nn;// path compression(tail recursion) saving the value of parent while coming back.
+        node.parent = nn;    // path compression(tail recursion) saving the value of parent while coming back.
         return nn;
     }
 

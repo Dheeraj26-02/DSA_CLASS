@@ -1,7 +1,7 @@
 public class Lexico {
     public static void main(String[] args) {
         int n=20;
-        lexico(20,0);
+        lexico(n,0);
     }
 
     public static void lexico(int t,int cur) {

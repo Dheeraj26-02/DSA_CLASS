@@ -150,15 +150,11 @@ public class Create {
             return;
         }
         q.add(root);
-        while(true) {
+        while(!q.isEmpty()) {
             int size = q.size();
-            if(size==0)
-            {
-                System.out.println(list);
-                return;
-            }
             List<Integer> l = new ArrayList<>();
-            while (!q.isEmpty()) {
+            
+            for(int i=0;i<size;i++){
                 Node node = q.poll();
                 l.add(node.val);
                 if (node.left != null) {
@@ -167,10 +163,10 @@ public class Create {
                 if (node.right != null) {
                     q.add(node.right);
                 }
-                size--;
             }
             list.add(l);
         }
+        System.out.println(list);
     }
 
     // Pre-Order(iterative)
