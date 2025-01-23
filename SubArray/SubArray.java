@@ -1,3 +1,4 @@
+package SubArray;
 public class SubArray {//[1,2,3]                [1],[2],[3],[1,2],[2,3],[1,2,3]
 
     public static void main(String[] args) {
