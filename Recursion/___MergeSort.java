@@ -12,8 +12,7 @@ public class ___MergeSort {
 
     public static int[] mergesort(int arr[], int s, int e) {
         if (s == e) {
-            int a[] = {arr[s]};
-            return a;
+            return new int []{arr[s]};
         }
         int mid = (s + e) / 2;
         int a1[] = mergesort(arr, s, mid);
