@@ -85,15 +85,12 @@ public class Create {
     public int max() {
         return max(root);
     }
-
     private int max(Node node) {
         if (node == null) {
             return Integer.MIN_VALUE;
         }
-
         int Left = max(node.left);
         int Right = max(node.right);
-
         return Math.max(node.val, Math.max(Left, Right));
     }
 

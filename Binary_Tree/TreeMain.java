@@ -7,6 +7,8 @@ public class TreeMain {
         System.out.println();
         System.out.println("Element is in tree:- " + ct.find(70));
         System.out.println();
+        System.out.println("Number of nodes:- "+ct.nodes());
+        System.out.println();
         System.out.println("Maximum Node value in tree:- " + ct.max());
         System.out.println();
         System.out.println("Height of tree:- " + ct.height());
