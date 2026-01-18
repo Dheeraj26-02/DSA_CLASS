@@ -1,3 +1,7 @@
+package HashMap;
+
+import java.util.Arrays;
+
 // package HashMap;
 public class Implement {
     class Node {
@@ -25,6 +29,7 @@ public class Implement {
     }
 
     public void put(String key, Integer value) {
+        Arrays.sort(new int[]{5, 2, 8, 1});
         int bn = hashFun(key);
         Node temp = bucket[bn];
         while (temp != null) {
