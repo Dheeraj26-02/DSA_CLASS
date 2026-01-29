@@ -81,5 +81,32 @@ public class Implementation {
         //Practice Question
         List<String> l=List.of("1","2","3","4");
         l.stream().map(Integer::parseInt).map(num->Math.pow(num,2)).reduce(Double::sum).map(Double::intValue).ifPresent(System.out::println);
+
+
+        //Arrays.asList()
+        Integer arr[]= {1,2,3,4,5};
+        List<Integer> arrlist=Arrays.asList(arr);
+//        arrlist.add(6);----> UnsupportedOperationException(Runtime Error)   because we can change length of list created by Arrays.asList()
+        arrlist.set(4,6);//but we can update the value
+        System.out.println(arrlist);
+
+
+        //Arrays.toList()
+        Integer arr1[]= {1,2,3,4,5};
+        List<Integer> arrlist1=Arrays.stream(arr1).toList();
+//        arrlist1.add(6);-----> UnsupportedOperationException(Runtime Error)   because we can change length of list created by Arrays.asList()
+//        arrlist1.set(4,6);----> UnsupportedOperationException(Runtime Error)   because we can not update the value of list created by Arrays.toList()
+        System.out.println(arrlist1);
+
+
+
+        //Collecter.toList()
+        System.out.println("Collectors");
+        Integer arr2[]= {1,2,3,4,5};
+        List<Integer> arrlist2=Arrays.stream(arr2).collect(Collectors.toList());
+        arrlist2.add(6); // we can change length of list created by Collectors
+        arrlist2.set(4,7); // we can update the value of list created by Collectors
+        System.out.println(arrlist2);
+
     }
 }
